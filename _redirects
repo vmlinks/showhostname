@@ -1,2 +1,3 @@
-/login.html /login.html 200
-/:path  /  302
+/login /login.html  302 
+/*.html  /:splat  302 
+/*.php  /:splat  302
