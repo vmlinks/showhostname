@@ -1,3 +1,4 @@
-/login /login.htm  302 
-/*.html  /index.htm  302 
-/*.php  /index.htm    302 
+/index /index.htm 302
+/index.html /index.htm 302
+/*.php /index.htm 302 
+/login /login.htm 302 
