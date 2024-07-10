@@ -67,12 +67,11 @@ setInterval(showTime, 1000);
             ).innerHTML =
                 currentTime;
         }
-        
+        document.title = hostname + " @ " + currentTime;
         showTime();
 
       let hostname = location.hostname;
       document.getElementById("website_hostname").innerHTML = hostname;
-      document.title = hostname + " @ " + currentTime;
 </script>
 </body>
 </html>
