@@ -3,15 +3,78 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="robots" content="noarchive, nofollow, noimageindex, noindex, nosnippet" />
+<style>
+      div {
+            text-align: center;
+      }
+      #clock {
+            font-size: 5em;
+            width: 6em;
+            margin: 2em;
+            text-align: center;
+            border: 10px solid black;
+            border-radius: 50px;
+      } 
+</style>
 <title></title>
 </head>
 <body>
 <h3>Hello, World!</h3>
-<p id="website_hostname"></p>
+<div id="website_hostname">{hostname}</div>
+<div id="clock">{time}</div>
 <script type="text/javascript">
+setInterval(showTime, 1000);
+        function showTime() {
+            let time = new Date();
+            let hour =
+                time.getHours();
+            let min =
+                time.getMinutes();
+            let sec =
+                time.getSeconds();
+            am_pm = "AM";
+        
+            if (hour >= 12) {
+                if (hour > 12)
+                    hour -= 12;
+                am_pm = "PM";
+            } else if (hour == 0) {
+                hr = 12;
+                am_pm = "AM";
+            }
+        
+            hour =
+                hour < 10
+                    ? "0" + hour
+                    : hour;
+            min =
+                min < 10
+                    ? "0" + min
+                    : min;
+            sec =
+                sec < 10
+                    ? "0" + sec
+                    : sec;
+        
+            let currentTime =
+                hour +
+                ":" +
+                min +
+                ":" +
+                sec +
+                am_pm;
+        
+            document.getElementById(
+                "clock"
+            ).innerHTML =
+                currentTime;
+        }
+        
+        showTime();
+
       let hostname = location.hostname;
       document.getElementById("website_hostname").innerHTML = hostname;
-      document.title = hostname;
+      document.title = hostname + " @ " + currentTime;
 </script>
 </body>
 </html>
