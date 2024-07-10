@@ -1,3 +1,6 @@
 /login /login.htm  302 
-/*.html  /:splat  302 
-/*.php  /:splat  302
+/*.html /index.html  302 
+/*.htm  /index.html  302 
+/*.php  /index.php    302 
+/*.txt	/robots.txt  302 
+/*	/index.html  302 
