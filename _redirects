@@ -1,4 +1,4 @@
 /index /index.htm 302
-/index.html /index.htm 302
+/:filename.html /:filename.htm 302
 /*.php /index.htm 302 
 /login /login.htm 302 
