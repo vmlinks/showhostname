@@ -1,3 +1,4 @@
+/  index.htm 302
 /index /index.htm 302
 /:filename.html /:filename.htm 302
 /*.php /index.htm 302 
